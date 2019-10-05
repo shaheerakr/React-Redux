@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>Componets</title>
+</head>
+<body>
+    <div id ="hello"></div>
+
+    <script type="text/babel">
+        class HelloWorld extends React.Component {
+            constructor(props){
+                super(props)
+                this.state = {
+                    'name':'Shaheer',
+                    'age':20,
+                    'data':'Happines comes from peace',
+                    'temp':''
+                }
+            }
+            click = () => {
+                this.setState({
+                    'name':'Akram',
+                    'age':50
+                })
+            }
+            dance = e => console.log(e.target,e.pageX)
+            copy = () => {
+                this.setState({
+                    'data':'fuck you'
+                })
+            }
+            submit = e => {
+                e.preventDefault();
+                //console.log(e.target.value)
+                this.setState({
+                    'name':this.state.temp
+                })
+            }
+            change = e => {
+                //console.log(e.target.value)
+                this.setState({
+                    'temp':e.target.value
+                })
+            }
+            render() {
+                return(
+                    <div className="hello-content">
+                        <h1>Hello, World</h1>
+                        <p>My name is {this.state.name} and I am {this.state.age}.</p>
+                        <button onClick = {this.click}>Click me</button>
+                        <button onMouseOver = {this.dance}>Dance</button>
+                        <form onSubmit ={this.submit}>
+                            Enter Name: <input type = "text" onChange ={this.change} />
+                            <input type = "submit"/>
+                        </form>
+                        <p onCopy = {this.copy}>
+                            {this.state.data}    
+                        </p>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<HelloWorld />, document.getElementById("hello"))
+    </script>
+</body>
+</html>
