@@ -18,11 +18,33 @@ class App extends Component {
       details : members
     })
   }
+  removeMember = (id) =>{
+    //console.log("member deleted: ",id)
+    let members = this.state.details.filter(member =>{
+      return member.id !== id
+    })
+    /*let members = [...this.state.details]
+    let newMembers = []
+    members.forEach((member)=>{
+      if(member.id === id){
+        console.log("member deleted: ",id)
+        //continue
+      }
+      else{
+        newMembers.push(member)
+      }
+    } )
+    //console.log(newMembers)
+    */
+    this.setState({
+      details : members
+    })
+  }
   render(){
     return (
       <div className="App-content">
       <h1>Hello, React!</h1>
-      <Details details = {this.state.details} />
+      <Details removeMember = {this.removeMember} details = {this.state.details} />
       <AddMember addMember={this.addMember}/>
       </div>
     )
