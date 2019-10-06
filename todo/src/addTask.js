@@ -20,7 +20,7 @@ class AddTask extends Component{
         return (
             <div>
                 <form onSubmit = {this.handleSubmit}>
-                    Add new Task: 
+                    <label>Add new Task: </label> 
                     <input type="text" onChange ={this.handleChange} value={this.state.task}/>
                     <button className="btn waves-effect blue" type="submit" name="action">
                         Add Task
