@@ -3,6 +3,7 @@ import Home from './components/home'
 import About from './components/about'
 import Contact from './components/contact'
 import Navbar from './components/navbar'
+import Rainbow from './components/hoc/rainbow'
 import {BrowserRouter,Route} from 'react-router-dom'
 
 class App extends Component {
@@ -20,4 +21,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Rainbow(App);
