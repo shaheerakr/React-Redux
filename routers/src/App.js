@@ -5,7 +5,7 @@ import Contact from './components/contact'
 import Navbar from './components/navbar'
 import Rainbow from './components/hoc/rainbow'
 import Post from './components/post'
-import {BrowserRouter,Route} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 class App extends Component {
   render(){
@@ -13,10 +13,12 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar/>
-          <Route exact path = '/' component = {Home}/>
-          <Route path = '/about' component = {About}/>
-          <Route path = '/contact' component = {Contact}/>
-          <Route path = '/post/:post_id' component = {Post} />
+          <Switch>
+            <Route exact path = '/' component = {Home}/>
+            <Route path = '/about' component = {About}/>
+            <Route path = '/contact' component = {Contact}/>
+            <Route path = '/:post_id' component = {Post} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
