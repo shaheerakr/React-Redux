@@ -4,6 +4,7 @@ import About from './components/about'
 import Contact from './components/contact'
 import Navbar from './components/navbar'
 import Rainbow from './components/hoc/rainbow'
+import Post from './components/post'
 import {BrowserRouter,Route} from 'react-router-dom'
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
           <Route exact path = '/' component = {Home}/>
           <Route path = '/about' component = {About}/>
           <Route path = '/contact' component = {Contact}/>
+          <Route path = '/post/:post_id' component = {Post} />
         </div>
       </BrowserRouter>
     );
