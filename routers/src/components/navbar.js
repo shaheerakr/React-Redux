@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink, withRouter } from 'react-router-dom'
+import satire_img from '../images/Satire.png'
 
 const Navbar = (props) =>{
     //console.log(props)
@@ -9,7 +10,9 @@ const Navbar = (props) =>{
     return(
         <nav className="nav-wrapper black">
             <div className="container">
-                <Link to ="/" className="brand-logo left">Shaheer's Time</Link>
+                <Link to ="/" className="brand-logo left">
+                    <img src={satire_img} alt="satire"/>
+                </Link>
                 <ul className="right">
                     <li><Link to ="/">Home</Link></li>
                     <li><NavLink to ="/about">About</NavLink></li>
