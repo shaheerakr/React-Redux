@@ -1,0 +1,43 @@
+[debug] [2019-10-13T10:37:37.110Z] ----------------------------------------------------------------------
+[debug] [2019-10-13T10:37:37.111Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2019-10-13T10:37:37.112Z] CLI Version:   7.5.0
+[debug] [2019-10-13T10:37:37.112Z] Platform:      linux
+[debug] [2019-10-13T10:37:37.112Z] Node Version:  v10.16.3
+[debug] [2019-10-13T10:37:37.112Z] Time:          Sun Oct 13 2019 15:37:37 GMT+0500 (Pakistan Standard Time)
+[debug] [2019-10-13T10:37:37.112Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-13T10:37:37.117Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-13T10:37:37.117Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/shaheer/CA282E03282DEF5F/Work/Java Script/react/React-Redux/routers
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using testing-dc217.
+[debug] [2019-10-13T10:37:40.747Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/testing-dc217  
+ 
+[debug] [2019-10-13T10:37:41.398Z] <<< HTTP RESPONSE 200
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
