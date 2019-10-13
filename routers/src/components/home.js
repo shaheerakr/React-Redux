@@ -18,7 +18,7 @@ class Home extends Component {
     //             .catch(error => console.log(error))
     // }
     render(){
-        console.log(this.props)
+        //console.log(this.props)
         const { posts } = this.props
         
         
